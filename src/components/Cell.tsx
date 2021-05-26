@@ -1,8 +1,13 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-const Cell: FC = () => {
-	return <StyledCell></StyledCell>;
+interface CellInterface {
+	id: number;
+	content: string;
+}
+
+const Cell: FC<CellInterface> = ({ id, content }) => {
+	return <StyledCell id={String(id)}>{content}</StyledCell>;
 };
 
 const StyledCell = styled.div`

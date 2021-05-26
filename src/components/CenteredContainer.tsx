@@ -9,6 +9,7 @@ const StyledContainer = styled.section`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	min-width: 100vw;
 	min-height: calc(100vh - 5rem);
 	margin: 0 auto;

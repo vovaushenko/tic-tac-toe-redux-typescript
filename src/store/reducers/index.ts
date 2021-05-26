@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { boardReducer } from './boardReducer';
 import { themeReducer } from './themeReducer';
 
 /*
@@ -9,6 +10,7 @@ import { themeReducer } from './themeReducer';
 
 export const rootReducer = combineReducers({
 	theme: themeReducer,
+	board: boardReducer,
 });
 
 /*
