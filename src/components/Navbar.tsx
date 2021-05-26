@@ -22,9 +22,9 @@ const Navbar: FC = () => {
 					</li>
 					<li>
 						<div>
-							<h4>Victories</h4>
-							<h4>Player(X) : {playerOneVictories}</h4>
-							<h4>Player(O) : {playerTwoVictories}</h4>
+							<h4>Total Victories</h4>
+							<h4>Player1 (X) : {playerOneVictories}</h4>
+							<h4>Player2 (O) : {playerTwoVictories}</h4>
 						</div>
 					</li>
 
@@ -40,6 +40,7 @@ const Navbar: FC = () => {
 const StyledNavbar = styled.header`
 	height: 5rem;
 	background-color: ${({ theme }) => theme.background};
+	box-shadow: 0 0 10px rgb(0 0 0 / 15%), 0 3px 3px rgb(0 0 0 / 15%);
 
 	nav {
 		display: flex;
