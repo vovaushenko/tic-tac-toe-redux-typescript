@@ -2,7 +2,7 @@
         === Main Interface ===
 */
 export interface BoardState {
-	board: string[][];
+	board: string[];
 	player: 'Player-1' | 'Player-2';
 }
 
@@ -21,7 +21,7 @@ export enum BoardActionTypes {
 
 interface MakeTurnAction {
 	type: BoardActionTypes.MAKE_TURN;
-	payload: number[];
+	payload: number;
 }
 interface ChangePlayerAction {
 	type: BoardActionTypes.CHANGE_PLAYER;
