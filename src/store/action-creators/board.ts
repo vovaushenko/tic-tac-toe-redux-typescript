@@ -8,6 +8,11 @@ export const makeTurn = (id: number) => ({
 export const changePlayer = () => ({
 	type: BoardActionTypes.CHANGE_PLAYER,
 });
+
 export const checkForVictory = () => ({
 	type: BoardActionTypes.CHECK_FOR_VICTORY,
+});
+
+export const resetBoard = () => ({
+	type: BoardActionTypes.RESET_BOARD,
 });

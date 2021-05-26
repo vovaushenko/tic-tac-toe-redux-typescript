@@ -4,8 +4,9 @@
 export interface BoardState {
 	board: string[];
 	player: 'Player-1' | 'Player-2';
-	winner: '' | 'Player-1' | 'Player-2';
 	turn: number;
+	winner: '' | 'Player-1' | 'Player-2';
+	winners: string[];
 }
 
 /*
@@ -15,6 +16,7 @@ export enum BoardActionTypes {
 	MAKE_TURN = 'MAKE_TURN',
 	CHANGE_PLAYER = 'CHANGE_PLAYER',
 	CHECK_FOR_VICTORY = 'CHECK_FOR_VICTORY',
+	RESET_BOARD = 'RESET_BOARD',
 }
 
 /*
@@ -31,6 +33,9 @@ interface ChangePlayerAction {
 interface CheckForVictoryAction {
 	type: BoardActionTypes.CHECK_FOR_VICTORY;
 }
+interface ResetBoardAction {
+	type: BoardActionTypes.RESET_BOARD;
+}
 
 /*
         === Combined Action Interface ===
@@ -38,4 +43,5 @@ interface CheckForVictoryAction {
 export type BoardActions =
 	| MakeTurnAction
 	| ChangePlayerAction
-	| CheckForVictoryAction;
+	| CheckForVictoryAction
+	| ResetBoardAction;

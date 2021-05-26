@@ -13,8 +13,9 @@ import {
 const initialState: BoardState = {
 	board: ['', '', '', '', '', '', '', '', ''],
 	player: 'Player-1',
-	winner: '',
 	turn: 0,
+	winner: '',
+	winners: [],
 };
 
 /*
@@ -26,7 +27,7 @@ const initialState: BoardState = {
 export const boardReducer = (
 	state: BoardState = initialState,
 	action: BoardActions
-) => {
+): BoardState => {
 	switch (action.type) {
 		case BoardActionTypes.CHANGE_PLAYER:
 			return {
@@ -40,7 +41,6 @@ export const boardReducer = (
 			let newBoard = state.board.map((cell, id) =>
 				id === action.payload - 1 ? mark : cell
 			);
-			console.log(state.turn);
 			return { ...state, board: newBoard, turn: state.turn + 1 };
 
 		case BoardActionTypes.CHECK_FOR_VICTORY:
@@ -61,11 +61,22 @@ export const boardReducer = (
 					state.board[id1] === state.board[id2] &&
 					state.board[id2] === state.board[id3]
 				) {
-					return { ...state, winner: state.player };
+					const winner = state.player;
+
+					const winners = [...state.winners, winner];
+
+					return { ...state, winner, winners };
 				}
 			}
-
 			return state;
+
+		case BoardActionTypes.RESET_BOARD:
+			return {
+				...state,
+				board: ['', '', '', '', '', '', '', '', ''],
+				turn: 0,
+				winner: '',
+			};
 
 		default:
 			return state;
