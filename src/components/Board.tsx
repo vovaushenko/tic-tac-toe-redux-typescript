@@ -13,6 +13,7 @@ const Board: FC = () => {
 
 		if (board[cellID - 1] === '') {
 			makeTurn(Number(e.target.id));
+			checkForVictory();
 			changePlayer();
 		}
 	};

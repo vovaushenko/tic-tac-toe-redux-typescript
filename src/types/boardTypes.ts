@@ -4,6 +4,8 @@
 export interface BoardState {
 	board: string[];
 	player: 'Player-1' | 'Player-2';
+	winner: '' | 'Player-1' | 'Player-2';
+	turn: number;
 }
 
 /*
