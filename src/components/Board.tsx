@@ -28,10 +28,12 @@ const Board: FC = () => {
 };
 
 const StyledBoard = styled.div`
-	height: 300px;
-	width: 300px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	gap: 2px;
+	width: 550px;
+	height: 550px;
+	background-color: ${({ theme }) => theme.mainColor};
 `;
 
 export default Board;

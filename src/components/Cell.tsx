@@ -18,15 +18,15 @@ const Cell: FC<CellInterface> = ({ id }) => {
 };
 
 const StyledCell = styled.div`
-	border: 2px solid ${({ theme }) => theme.mainColor};
-	width: 100px;
-	height: 100px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-color: ${({ theme }) => theme.background};
+	height: 182px;
+	width: 182px;
 
 	p {
-		font-size: 2rem;
+		font-size: 4rem;
 	}
 `;
 

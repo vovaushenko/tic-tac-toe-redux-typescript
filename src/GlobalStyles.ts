@@ -31,10 +31,7 @@ h6 {
   letter-spacing: 2px;
   font-weight:300;
 }
-p {
-  margin-bottom: 1rem;
-  letter-spacing: 1.1px;
-}
+
 
 ul {
   list-style-type: none;

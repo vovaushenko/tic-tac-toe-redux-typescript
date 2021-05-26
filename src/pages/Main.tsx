@@ -10,7 +10,7 @@ const Main: FC = () => {
 	if (winner) {
 		return (
 			<CenteredContainer>
-				<h1>{player} wins in this battle! Contratulations 😉</h1>
+				<h1>{winner} wins in this battle! Contratulations 😉</h1>
 			</CenteredContainer>
 		);
 	}
@@ -24,7 +24,9 @@ const Main: FC = () => {
 
 	return (
 		<CenteredContainer>
-			<h2>Current Turn: {player === 'Player-1' ? 'X' : 'O'}</h2>
+			<h2>
+				Current Turn: {player === 'Player-1' ? 'X (Player 1)' : 'O (Player 2)'}
+			</h2>
 			<Board />
 		</CenteredContainer>
 	);
