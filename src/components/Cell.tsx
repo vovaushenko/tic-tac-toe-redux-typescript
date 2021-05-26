@@ -28,6 +28,15 @@ const StyledCell = styled.div`
 	p {
 		font-size: 4rem;
 	}
+
+	@media ${({ theme }) => theme.media.phone} {
+		width: 66px;
+		height: 66px;
+
+		p {
+			font-size: 2rem;
+		}
+	}
 `;
 
 export default Cell;

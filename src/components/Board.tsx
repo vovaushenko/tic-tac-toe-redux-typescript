@@ -34,6 +34,11 @@ const StyledBoard = styled.div`
 	width: 550px;
 	height: 550px;
 	background-color: ${({ theme }) => theme.mainColor};
+
+	@media ${({ theme }) => theme.media.phone} {
+		width: 200px;
+		height: 200px;
+	}
 `;
 
 export default Board;

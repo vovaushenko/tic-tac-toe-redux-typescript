@@ -13,6 +13,7 @@ const StyledContainer = styled.section`
 	min-width: 100vw;
 	min-height: calc(100vh - 5rem);
 	margin: 0 auto;
+	text-align: center;
 `;
 
 export default CenteredContainer;
